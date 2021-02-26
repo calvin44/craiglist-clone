@@ -1,12 +1,81 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- material ui cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- local css file -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Craiglist app</title>
   </head>
   <body>
-    <h2>Testing to see if this is working</h2>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="/" class="brand-logo">Codedaddies list</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navigation Bar End -->
+    <div class="con">
+      <!-- Title Section -->
+      <h1 style="text-align: center">
+        What do you want to search for Codedaddies list?
+      </h1>
+      <!-- Title Section End -->
+
+      <!-- Iconic -->
+      <div class="row">
+        <div class="col s4">
+          <div class="center">
+            <i class="large material-icons" style="color: #ee6e73"> flash_on</i>
+            <p>Fast Craiglist web scrapper</p>
+            <p class="light center">
+              Scrape away right here with a beautiful GUI.
+            </p>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="center">
+            <i class="large material-icons" style="color: #ee6e73">camera</i>
+            <p>Fast Craiglist web scrapper</p>
+            <p class="light center">
+              Scrape away right here with a beautiful GUI.
+            </p>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="center">
+            <i class="large material-icons" style="color: #ee6e73">camera</i>
+            <p>Fast Craiglist web scrapper</p>
+            <p class="light center">
+              Scrape away right here with a beautiful GUI.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Iconic End -->
+    </div>
+
+    {% block content %} {% endblock content %}
+
+    <!-- Materialize JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Materialize JS CDN End -->
   </body>
 </html>

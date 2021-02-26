@@ -32,7 +32,7 @@
       </div>
     </nav>
     <!-- Navigation Bar End -->
-    <div class="con">
+    <div class="container">
       <!-- Title Section -->
       <h1 style="text-align: center">
         What do you want to search for Codedaddies list?
@@ -51,29 +51,45 @@
           </div>
         </div>
         <div class="col s4">
+          <!-- Promo Content 2 goes here -->
           <div class="center">
-            <i class="large material-icons" style="color: #ee6e73">camera</i>
-            <p>Fast Craiglist web scrapper</p>
+            <i class="large material-icons" style="color: orange">camera</i>
+            <p>Filter your searches</p>
             <p class="light center">
-              Scrape away right here with a beautiful GUI.
+              We built in functionality to filter based on pricing.
             </p>
           </div>
         </div>
         <div class="col s4">
+          <!-- Promo Content 3 goes here -->
           <div class="center">
-            <i class="large material-icons" style="color: #ee6e73">camera</i>
-            <p>Fast Craiglist web scrapper</p>
-            <p class="light center">
-              Scrape away right here with a beautiful GUI.
-            </p>
+            <i class="large material-icons" style="color: blue"
+              >chrome_reader_mode</i
+            >
+            <p>A much sexier front-end to Craigslist</p>
+            <p class="light center">We built this with ❤️</p>
           </div>
         </div>
       </div>
       <!-- Iconic End -->
+
+      <!-- Form -->
+      <form action="{% url 'new_search' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="search" />
+        <button
+          class="btn waves-effect waves-light"
+          name="submit"
+          type="submit"
+          name="action"
+        >
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+      <!-- Form End -->
+      {% block content %} {% endblock content %}
     </div>
-
-    {% block content %} {% endblock content %}
-
     <!-- Materialize JS CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Materialize JS CDN End -->

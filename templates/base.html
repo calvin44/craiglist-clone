@@ -76,7 +76,7 @@
       <!-- Form -->
       <form action="{% url 'new_search' %}" method="post">
         {% csrf_token %}
-        <input type="text" name="search" placeholder="search" />
+        <input type="text" required name="search" placeholder="search" />
         <button
           class="btn waves-effect waves-light"
           name="submit"
